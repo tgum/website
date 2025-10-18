@@ -1,0 +1,170 @@
+/*
+  tgum's styles!
+  i made them myself so if u use them please link back to me or something!
+ */
+
+/* idk like general styles */
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	color: #201127;
+	background-color: #ffc27a;
+	background-image: url('/imgs/background.png');
+	background-repeat: repeat;
+	image-rendering: pixelated;
+	line-height: 1.3em;
+	overflow-wrap: anywhere;
+}
+
+img {
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+hr {
+	border: 1px solid #201433;
+  width: 95%;
+}
+
+a {
+	color: #355d68;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 0 0 0.2rem 0;
+}
+
+a:visited {
+	color: #a73169;
+}
+
+a:hover {
+	color: #d9626b;
+	border-width: 0 0 0.4rem 0;
+}
+
+a[href^="https://"]:not(.badge)::after {
+	content: url('/imgs/external.png');
+}
+
+.title,
+h1 {
+	text-indent: 0.5em;
+}
+
+main {
+	background-color: #ffc27a;
+	padding: 1rem 1rem 1rem 1rem;
+	margin: 1rem 3rem 1rem 3rem;
+	@media (orientation: portrait) {
+		margin: 0.5rem 1rem 0.5rem 1rem;
+	}
+
+	border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAA3xJREFUWEetWe1VQyEMhY3sOHUCnUgnsOPUjZ6HQCDfhB7fH+srJDeX5AJpLdunllqu8nP7vNrQ9+dXbR8e4//786uWUksp8LV4+lw9Xs5f06gl+DxeVN/FGtTMcGC+Iw21h9Dmt78t0GnvKuX+2//HRwEdX8xBCAQnAFO1lMdbZ7I/7WOFP/ffb/iA8+Cb8bW1SM1ec4YrI232lVkEMBzNNkbAgV7l/mxA9ERpgAH10ogw18fziBTThBQMoLYIGffDmRehBGphW8unF9ILDP15eKpccnQsi0YCQsNuHTnsaqCdXUaMkUKsmMIcaklvFTYA8krSy4X1HosMVxUxTiJYMRE/mmEesXK9wbhTFbNYS5kMIwdu1XtcyEgtWaFzPbnxUo7OpUVGgH5cfQnjxwMazjJozQBtNkFnJzLQSwp06SVinzJBdotdUJnsfdxigqhf8DcjdESbAc0gVEVmZ+sEmvALK86TWkqyRsZTgGci7u9WPOBHlngQ+DGjsY5m5KmPYbkZbLlyY5mCHxVJHkY2JzIWe2nj2YAA7YcM9oT2xpfGmFA7jVgiN7gCSp5QDs7khrvK8RWzL4+VTPClwP73jnkSQAC06xkVWBdoNhWtM0ASbcgo7ATjAHu29N7o11MivfTL9bj3KCbWfShHcJLKYex1RjfVbcM4A0cDPgNqsGjfNnOc0lE7CVNAcYIVASumneUtVkN34ZV3BuiXyrmFekBpji4W/0HdtwH1AfJ6zXQ0XfXjZOQdPgKikjB134Dt9S85yNSLZzgxd26hNDczW7udEuNt2kBeX/ux8CrudXnXuZBrSF0niJp7lnklIce/WUww0OjHeEDxvp9Ots3ANFC0w6tscWI2t4ytNsOoJcvyZmHHtS4Fbhtx5jDcBmv5uX2A8m3PBN5mISLKXoFceZL62iNdybMFalBj5a5cMbrCSy6hsdg7Mi0yeh6VE6RfbCM6G8scvissviPylAOg7F6/id7Lvx2IqI5oEUUEqVuoadTYnk+r3QtmAbV7W+rsIV+gwIaN3NGYtUHkeJaMzmIRTOBvBLORy1vXXsdZt8YthjNQ072nceNQ93o0kG3knjqUge3mq50Jf53oEymjdhMrap1bPzx4cnYGVGgkPe6pHB6/LyEzFgBPL9UxkvS8pB23mOaSjDSEpTcMSQaywi8d28K+muxyS/8DIya8SlToDU4AAAAASUVORK5CYII=") 14 / 14px / 0 round;
+	border-width: 14px;
+	border-style: solid;
+}
+
+footer {
+	height: 50vh;
+}
+
+ol,
+ul {
+	padding-left: 0;
+}
+
+/* NAVBAR */
+
+#navbar {
+	padding: 0;
+	margin: 0;
+	background-color: #1b1e34;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.navel {
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	margin: 0.5rem;
+	border-width: 0 0 0.3rem 0;
+	color: #6aaf9d;
+}
+
+.navel:visited {
+	color: #6aaf9d;
+}
+
+.navel:hover {
+	color: #d9626b;
+	border-width: 0 0 0.3rem 0;
+}
+
+/* MY EPIK CURSORS */
+
+body {
+	cursor: url("/imgs/cursors/arrow.png") 0 0, auto !important;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+summary,
+label {
+	cursor: url("/imgs/cursors/hand.png") 10 3, auto;
+}
+
+:where(input[type="text"],
+	input[type="search"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="number"],
+	input:not([type]),
+	textarea,
+	[contenteditable="true"],
+	[contenteditable]:not([contenteditable="false"]),
+	[role="textbox"]) {
+	cursor: url("/imgs/cursors/i-beam.png") 15 17, auto !important;
+}
+
+textarea:resizer {
+	cursor: url("/imgs/cursors/resize_se.png") 15 15, auto;
+}
+
+/* GET AN ADBLOCKER NOTIFICATION */
+
+#ad-note-hidden,
+#ad-note {
+	display: none;
+}
+
+#ad-note {
+	display: block;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	width: 14em;
+	border: #a73169 2px solid;
+	background-color: #ffc27a;
+	padding: 1em;
+	font-size: 0.9em;
+}
+
+#ad-note-content-wrapper {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+/* custome CBOX */
+.cbox {
+	border: solid 1px #201433;
+}

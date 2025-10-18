@@ -1,0 +1,28 @@
+title: changelog
+description: list of changes
+creationtime: 0
+edittime: 0
+keywords: changelog
+---
+§page
+	§h1 list of changes §/h1
+	§change [18/10/25]
+		i pushed the new version! i am finally free to actually make the website!
+	§/change
+	§change [17/10/25]
+		im remaking so much of the websites cuz the new template system is almost done!
+	§/change
+	§change [20/09/25]
+		the cbox has a custom theme and emojis that fit in better with the website!
+	§/change
+	§change [17/09/25]
+		added a CBox! you can now leave messages and stuff!
+	§/change
+	§change [11/09/25]
+		added a §l [https://maurycyz.com/misc/ads/] "no adblock detected" §/l footer
+	§/change
+	§change [10/09/25]
+		added a changelog page<br>
+		started adding a bunch of content
+	§/change
+§/page

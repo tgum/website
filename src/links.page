@@ -1,0 +1,22 @@
+title: links
+description: tgum's collection of cool links
+keywords: 
+---
+§page
+	<h1 class=title>cool stuff</h1>
+	<p>
+		this is a compilation of cool stuff on the internet
+	</p>
+	<ol>
+	  <li>§l [#coolsites] cool websites/resources §/l </li>
+	</ol>
+	<h2 id="coolsites">cool websites/resources</h2>
+	§ul
+		§l https://tinytools.directory/ §/l : a list with loads of interesting tools
+		§l https://paulsmith.github.io/classic-mac-patterns/ §/l : the patterns used by classic mac os, its really cool what you can do by tiling an 8x8 picture
+		§l https://simpledesktops.com/ §/l : minimal wallpapers
+		§l https://maxbittker.github.io/broider/ §/l : a website that lets you make cool tileable borders (i used it to make the one on this site!)
+		§l https://32bit.cafe/ §/l : resources creating a website on the small/indie web
+		§l https://adamledoux.net/ §/l : the guy that made §l [https://www.bitsy.org/] bitsy §/l (and other cool stuff)
+	§/ul
+§/page

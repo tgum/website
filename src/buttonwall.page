@@ -1,0 +1,15 @@
+title: button wall!
+description: some buttons i found and enjoy
+keywords: 
+---
+§page
+§h1 §%title §/h1
+<p>
+	§%description
+</p>
+<p style="text-align: center;">
+	§l [https://adamledoux.net] §badge [adam le doux dot net] /imgs/buttons/adamledoux.png §/badge §/l
+	§l [https://github.com/gorhill/uBlock] §badge [ublock origin NOW!] /imgs/buttons/ublock_origin_now.webp §/badge §/l
+	§l [http://www.hat.net/abs/noclick/] §badge [Don't click here!] /imgs/buttons/noclick.gif §/badge §/l
+</p>
+§/page

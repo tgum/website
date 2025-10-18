@@ -1,0 +1,34 @@
+%hr:
+	<hr>
+ul:
+	local attributes, items = extract_extra(content)
+	local lines = strease.split(items, "\n")
+	local output = "<ul "..attributes.." >"
+	for i, line in ipairs(lines) do
+		if strease.trim(line) ~= "" then
+			output = output .. "\n<li>" .. line .. "</li>"
+		end
+	end
+	return output.."</ul>"
+l:
+	local url, text = extract_extra(content)
+	if url == "" then
+		url = text
+	end
+	return '<a href="'..strease.trim(url)..'">'..format(text).."</a>"
+img:
+	-- TODO: load width and height to prevent layout change
+	local alt, url = extract_extra(content)
+	return '<img src="'..url..'" alt="'..alt.."" />"
+badge:
+	local alt, url = extract_extra(content)
+	return '<img class="badge" width="88" height="31" src="'..url..'" alt="'..alt..'" />'
+h1:
+	local attributes, text = extract_extra(content)
+	return "<h1 class=title "..attributes.." >"..format(text).."</h1>"
+%mybutton:
+	§badge [tgum] /imgs/button.gif §/badge
+%cbox:
+	<div id="cboxcontainer"><iframe src="https://www5.cbox.ws/box/?boxid=958660&boxtag=WKJKjN" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class=cbox></iframe></div>
+%statuscafe:
+	<iframe src="https://melonking.net/frames/statusProxy.html?name=tgum&css=https://tgum.neocities.org/styles/status_cafe_widget.css" style="border: none; width: 100%; max-width: 500px; height: 150px"></iframe>

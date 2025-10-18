@@ -1,0 +1,33 @@
+%blogcard:
+	<div class="blogcard">
+		§%hr
+		<h2><a href="§%url ">§%title </a></h2>
+		<div class=time>Written on: §%creationtime </div>
+		<p>§%description </p>
+	</div>
+blogpost:
+	return format([[
+	§page
+	<article>
+	§h1 §%title §/h1
+	<div class=time>Written on the <strong>§%creationtime </strong></div>
+	<hr>
+	<section>
+	]]..content..[[
+	</section>
+	</article>
+	§/page
+	]])
+blogpage:
+	local blogposts = listdir(INPUT_DIR.."blog")
+	local output = ""
+	for i, post in pairs(blogposts) do
+		if post ~= "index.page" then
+			local path = "blog/"..post
+			content = readfile(INPUT_DIR..path)
+			content, meta = splitmeta(content)
+			meta["%url"] = "/"..path:gsub("%.page$", ".html")
+			output = output..format("§%blogcard ", meta)
+		end
+	end
+	return output

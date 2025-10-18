@@ -1,0 +1,9 @@
+change:
+	local date, content = extract_extra(content)
+	return [[<div class="change">
+		<strong class="date">[]]..date..[[]</strong>
+		<p>
+		]]..content..[[
+		</p>
+	</div>]]
+

@@ -1,0 +1,38 @@
+title: home page
+description: hi welcome to tgum's website
+creationtime: 0
+edittime: 0
+keywords: index, blog, indieweb, smolweb
+---
+§page
+	§h1 tgum's website §/h1
+	§%statuscafe
+	<p>
+		this is my personal website with stuff and stuff
+	</p>
+
+	<h2>
+		things you can find here
+	</h2>
+	§ul
+		§l [/projects/] stuff i made §/l
+		§l [/links.html] things i enjoy on the internet §/l
+		§l [/changelog.html] see changes §/l
+	§/ul
+	<h2>
+		todo:
+	</h2>
+	§ul
+		remake the code for the website to support more complex stuff
+		add an updates section to the homepage
+		add an atom feed
+		write stuff lol
+	§/ul
+	<p>
+		have any suggestions for this website or just wanna say hi?<br>
+		§badge [is it slow? say so!] /imgs/buttons/isitslow.gif §/badge
+	</p>
+	§%cbox
+	§%mybutton
+§/page
+

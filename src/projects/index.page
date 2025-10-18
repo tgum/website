@@ -1,0 +1,17 @@
+title: projects
+description: some cool stuff i made
+keywords: 
+---
+§page
+	§h1 my projects §/h1
+	<p>
+		sum cool stuff i made
+	</p>
+	<p>
+		uhh i gotta put more stuff here
+	</p>
+	<h2>my gamez</h2>
+	<p>
+		§l https://tgum.itch.io §/l uhh yeah some games i made
+	</p>
+§/page

@@ -1,0 +1,28 @@
+title: my epic recipes
+description: a list of epic recipes and stuff
+creationtime: 0
+edittime: 0
+keywords: index, recipes, cooking, baking
+generator: true
+---
+import os
+import templates
+formatted = """
+{%opendoc}
+<h1 class=title>cool tasty recipes!</h1>
+<p>
+	this is a compilation of cool recipes i found and made with some comments and stuff
+</p>
+"""
+
+for post in os.listdir("src/recipes"):
+  if post == "index.html.page":
+    continue
+  with open("src/recipes/"+post) as f:
+    _, postmeta = splitmeta(f.read())
+    additional_fmt = {"url":f"/recipes/{post.removesuffix(".page")}.html"}
+    formatted += templates.format(templates.templates["%recipecard"], postmeta|additional_fmt)
+
+formatted += "{%closedoc}"
+
+return formatted
