@@ -13,6 +13,7 @@
 			<meta property="og:title" content=" §%title ">
 			<meta property="og:description" content=" §%description ">
 			<link rel="webmention" href="https://webmention.io/tgum.neocities.org/webmention" />
+			<script src="/scripts/countdown.js"></script>
 			<title> §%title </title>
 		</head>
 		<body>
