@@ -1,0 +1,24 @@
+title: custart tart/flan pâtissier recipe
+description: im still polishing the recipe so it could be better
+---
+§recipe
+	§ingredients
+		§l [/recipes/pate_brisee.html] 1 pâte brisée §/l
+		175g sugar
+		4 eggs
+		2 egg yolks
+		800ml milk
+		200ml cream
+		90g cornstarch
+		around 1tsp vanilla extract, can be replaced with vanilla sugar
+	§/ingredients
+
+	§instructions
+		boil the milk and cream with the vanilla
+		while its heating up mix the sugar and cornstarch
+		add in the eggs and yolks and whisk
+		add in the hot milk while still whisking
+		then put it back in the pan and cook on low heat while still whisking for around 5 minutes until it gets a nice creamy thick consistency
+		pour the cream in the dough and bake it at 180°c for 40 minutes
+	§/instructions
+§/recipe

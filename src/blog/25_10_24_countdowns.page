@@ -1,0 +1,30 @@
+title: countdowns
+description: i made some countdowns in javascript
+creationtime: 24th Oct 2025
+edittime: 24th Oct 2025
+keywords: javascript, code, website
+---
+§blogpost
+§code [javascript]
+//countdown by tgum
+(d=>{setInterval(T=>{for(d of Array.from(document.querySelectorAll`.countdown`)){let f=Math.floor,t=(new Date(d.dataset.timestamp)-Date.now())/1000,e="",U=[86400,3600,60,1],F=(u,p)=>f(u/U[p])>0?T=f(u%(p>0?U[p-1]:u+1)/U[p])+" "+"Day0Hour0Minute0Second".split(0)[p]+(T^1?"s":e)+(p<3?", ":e):e;d.innerText=t<1?d.dataset.message:F(t,0)+F(t,1)+F(t,2)+F(t,3)}},1000)})()
+§/code
+<div>
+	time until the year 3000: <strong> §countdown [why are you reading my blog 975 years from now?] 3000 §/countdown </strong>
+</div>
+<p>
+	earlier i said to myself: "you know what would greatly improve this website? a bunch of countdowns". so i obviously stopped what i was doing and started coding, but since this is pretty easy to make i decided to challenge myself by making it as small as possible, and i think i ended up with a pretty good result at 365 bytes (especially for my first time doing something like this)
+</p>
+<p>
+	if you want you can use it on your own website its pretty simple. first you need to include the script in your page §l [/scripts/countdown2.js] (download)§/l and then add an element with the class "countdown" and the attributes "data-message" (what will be shown when the countdown expires) and "data-timestamp" (a javascript date string, i'd explain how its formatted if i knew, but there are probably converters/generators online)§%br
+	example:
+§code [html]
+<span class="countdown" data-message="the countdown expired" data-timestamp="2025-10-22"></span>
+§/code
+	also i think you need to encode the timezone in the timestamp somehow else it will use the users timezone which may not be intended
+</p>
+<p>
+	if you have any questions or are using it on your website you can email me at tgum[at]proton[dot]me
+</p>
+§%countdownscript
+§/blogpost

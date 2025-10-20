@@ -1,0 +1,14 @@
+title: tgum's recipe book
+description: a list of epic recipes and stuff
+creationtime: 0
+edittime: 0
+keywords: index, recipes, cooking, baking
+generator: true
+---
+§page
+	§h1 §%title §/h1
+	<p>
+		some recipes ive made and enjoyed. they're not perfect but im updating them with new improvement i find!
+	</p>
+	§recipespage §/recipespage
+§/page

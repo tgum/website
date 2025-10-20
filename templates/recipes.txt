@@ -1,0 +1,53 @@
+%recipecard:
+	<div class="recipecard">
+		§%hr
+		<h2><a href="§%url ">§%title </a></h2>
+		<p>§%description </p>
+	</div>
+recipe:
+	return format([[
+	§page
+	<article class="h-recipe">
+	§h1 [class="p-name"] §%title §/h1
+	<p>§%description </p>
+	<p>§if [%source] Original from §l §%source §/l §/if
+	<hr>
+	<section>
+	]]..content..[[
+	</section>
+	</article>
+	§/page
+	]])
+ingredients:
+	local attributes, items = extract_extra(content)
+	local lines = strease.split(items, "\n")
+	local output = "<h2>Ingredients:</h2><ul "..attributes.." >"
+	for i, line in ipairs(lines) do
+		if strease.trim(line) ~= "" then
+			output = output .. '\n<li class="p-ingredient">' .. line .. "</li>"
+		end
+	end
+	return output.."</ul>"
+instructions:
+	local attributes, items = extract_extra(content)
+	local lines = strease.split(items, "\n")
+	local output = "<h2>Instructions:</h2><div class='e-instructions'><ol "..attributes.." >"
+	for i, line in ipairs(lines) do
+		if strease.trim(line) ~= "" then
+			output = output .. "\n<li>" .. line .. "</li>"
+		end
+	end
+	return output.."</ol></div>"
+recipespage:
+	local recipes = listdir(INPUT_DIR.."recipes")
+	local output = ""
+	for i, post in pairs(recipes) do
+		if post ~= "index.page" then
+			local path = "recipes/"..post
+			content = readfile(INPUT_DIR..path)
+			content, meta = splitmeta(content)
+			meta["%url"] = "/"..path:gsub("%.page$", ".html")
+			output = output..format("§%recipecard ", meta)
+		end
+	end
+	return output

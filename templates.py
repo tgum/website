@@ -95,6 +95,8 @@ def get_matching(start, tokens_list):
     index = start
     while depth >= 0:
         index += 1
+        if index >= len(tokens_list):
+            print(tokens_list[start])
         token = tokens_list[index]
         if token.type == TokenTypes.OPEN_TAG:
             depth += 1

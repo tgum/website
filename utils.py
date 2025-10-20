@@ -2,6 +2,7 @@ import os
 import pygments
 from pygments import lexers
 from pygments import formatters
+from pygments_better_html import BetterHtmlFormatter
 
 
 def listdir(path):
@@ -32,6 +33,8 @@ def splitmeta(file):
 def extract_extra(text):
     extra = ""
     main = text
+    if text.lstrip() == "":
+        return "", ""
     if text.lstrip()[0] == "[":
         text = text.lstrip()
         try:
@@ -45,7 +48,5 @@ def extract_extra(text):
 
 def highlight(code, language):
     lexer = pygments.lexers.get_lexer_by_name(language)
-    formatter = pygments.formatters.HtmlFormatter(
-        linenos=True, style="fruity", classprefix="hi"
-    )
+    formatter = BetterHtmlFormatter(linenos="table", style="fruity", classprefix="hi")
     return pygments.highlight(code, lexer, formatter)

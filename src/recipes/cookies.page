@@ -1,38 +1,31 @@
 title: cookie recipe
-description: Recipe for extremely tasty cookies
-creationtime: 0
-edittime: 100
-keywords: recipe, cooking, baking, cookies
+description: Recipe for extremely tasty cookies.
+source: https://www.koket.se/subway-cookies
 ---
-{%openrecipe}
-Original from {l}https://www.koket.se/subway-cookies{->}https://www.koket.se/subway-cookies{/l}
-
-<h2>ingredients</h2>
-<ul>
-  <li>300g butter</li>
-  <li>4dl sugar</li>
-  <li>4tbsp syrup</li>
-  <li>4teaspoon vanilla sugar</li>
-  <li>3 eggs</li>
-  <li>7dl wheat flour</li>
-  <li>1tbsp bicarbonate 3tbsp baking powder</li>
-  <li>1pinch of salt</li>
-  <li>150-200g chocolate chips/</li>
-</ul>
-
-<h2>instructions</h2>
-<ol>
-  <li>Preheat oven to 175°c</li>
-  <li>Beat toghether the butter sugar syrup and vanilla sugar into a fluffy batter</li>
-  <li>Add the eggs while still whisking, one by one</li>
-  <li>In a seperate bowl carefully mix ur wheat floar bicarbonate and salt</li>
-  <li>add the dry ingredients to the other bowl and mix gently with a spatula until u have a smoof and stiky dough</li>
-  <li>finally add the chokolate chips and mux gently until evenly distributed</li>
-  <li>let dough rest for 30 mins before rolling it into 36 equal balls and distributing them on baking sheets covered with baking paper. Press them down lightly and keep a good distance between the cookies on the sheet so that they don't melt together in the oven.</li>
-  <li>Bake the cookies in the lower part of the oven for about 10 minutes. They should be just cooked around the edges and still soft in the middle.</li>
-  <li>Once you have removed the cookies from the oven, immediately transfer the baking paper with the cookies onto a wire rack to cool.</li>
-  <li>If they remain on the hot baking sheet, they will be baked with residual heat and lose their good chewiness in the middle.</li>
-  <li>Let cool thoroughly before serving!</li>
-</ol>
-
-{%closerecipe}
+§recipe
+  §ingredients
+    300g butter
+    4dl sugar
+    4tbsp syrup
+    4teaspoon vanilla sugar
+    3 eggs
+    7dl wheat flour
+    1tbsp bicarbonate or 3tbsp baking powder
+    1pinch of salt
+    150-200g chocolate chips
+  §/ingredients
+  
+  §instructions
+    Preheat oven to 175°c
+    Beat toghether the butter sugar syrup and vanilla sugar into a fluffy batter
+    Add the eggs while still whisking, one by one
+    In a seperate bowl carefully mix ur wheat floar bicarbonate and salt
+    add the dry ingredients to the other bowl and mix gently with a spatula until u have a smoof and stiky dough
+    finally add the chokolate chips and mux gently until evenly distributed
+    let dough rest for 30 mins before rolling it into 36 equal balls and distributing them on baking sheets covered with baking paper. Press them down lightly and keep a good distance between the cookies on the sheet so that they don't melt together in the oven.
+    Bake the cookies in the lower part of the oven for about 10 minutes. They should be just cooked around the edges and still soft in the middle.
+    Once you have removed the cookies from the oven, immediately transfer the baking paper with the cookies onto a wire rack to cool.
+    If they remain on the hot baking sheet, they will be baked with residual heat and lose their good chewiness in the middle.
+    Let cool thoroughly before serving!
+  §/instructions
+§/recipe

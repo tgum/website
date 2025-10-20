@@ -1,5 +1,14 @@
+if:
+	local condition, rest = extract_extra(content)
+	if templates[condition] ~= nil then
+		return rest
+	else
+		return ""
+	end
 %hr:
 	<hr>
+%br:
+	<br>
 ul:
 	local attributes, items = extract_extra(content)
 	local lines = strease.split(items, "\n")
@@ -11,6 +20,7 @@ ul:
 	end
 	return output.."</ul>"
 l:
+	print(content)
 	local url, text = extract_extra(content)
 	if url == "" then
 		url = text

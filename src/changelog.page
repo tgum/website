@@ -7,6 +7,9 @@ keywords: changelog
 §page
 	§h1 list of changes §/h1
 	§change [18/10/25]
+		we got countdowns and syntax highlighting now! i think im gonna post abt the countdown
+	§/change
+	§change [18/10/25]
 		i pushed the new version! i am finally free to actually make the website!
 	§/change
 	§change [17/10/25]

@@ -27,7 +27,7 @@ blogpage:
 			content = readfile(INPUT_DIR..path)
 			content, meta = splitmeta(content)
 			meta["%url"] = "/"..path:gsub("%.page$", ".html")
-			output = output..format("§%blogcard ", meta)
+			output = format("§%blogcard ", meta)..output
 		end
 	end
 	return output
