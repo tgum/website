@@ -3,8 +3,8 @@
 let countdowns = []
 setInterval(() => {
   let now = Date.now()
-  let units      = [31536000, 2592000, 86400, 3600, 60, 1]
-  let unit_names = ["year", "month", "day", "hour", "minute", "second"]
+  let units      = [86400, 3600, 60, 1]
+  let unit_names = ["day", "hour", "minute", "second"]
   for (let countdown of countdowns) {
     let timeleft = (countdown.timestamp - now)/1000
     let output = ""
@@ -26,10 +26,11 @@ setInterval(() => {
     countdown.element.innerText = output
   }
 })
-function add_countdown(selector, end_timestamp, message_done="countdown over!") {
+
+for (let countdown of Array.from(document.querySelectorAll(".countdown"))) {
   countdowns.push({
-    element: document.querySelector(selector),
-    message_done: message_done,
-    timestamp: new Date(end_timestamp).getTime()
+    element: countdown,
+    message_done: countdown.dataset.message,
+    timestamp: new Date(countdown.dataset.timestamp).getTime()
   })
 }

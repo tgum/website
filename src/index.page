@@ -32,7 +32,24 @@ keywords: index, blog, indieweb, smolweb
 		have any suggestions for this website or just wanna say hi?<br>
 		§badge [is it slow? say so!] /imgs/buttons/isitslow.gif §/badge
 	</p>
+	<p>time till 2026: §countdown [its 2026!] 2026 §/countdown</p>
+	§code [lua]
+-- greg
+local attributes, items = extract_extra(content)
+local lines = strease.split(items, "\n")
+local output = "<ul "..attributes.." >"
+for i, line in ipairs(lines) do
+	if strease.trim(line) ~= "" then
+		output = output .. "\n<li>" .. line .. "</li>"
+	end
+end
+return output.."</ul>"
+	§/code
+	§code [javascript]
+(d=>{setInterval(T=>{for(d of Array.from(document.querySelectorAll`.countdown`)){let f=Math.floor,t=(new Date(d.dataset.timestamp)-Date.now())/1000,e="",U=[86400,3600,60,1],F=(u,p)=>f(u/U[p])>0?T=f(u%(p>0?U[p-1]:u+1)/U[p])+" "+"Day0Hour0Minute0Second".split(0)[p]+(T^1?"s":e)+(p<3?", ":e):e;d.innerText=t<1?d.dataset.message:F(t,0)+F(t,1)+F(t,2)+F(t,3)}},1000)})()
+	§/code
 	§%cbox
 	§%mybutton
+	§%countdownscript
 §/page
 

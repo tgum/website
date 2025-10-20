@@ -26,7 +26,7 @@ img {
 
 hr {
 	border: 1px solid #201433;
-  width: 95%;
+	width: 95%;
 }
 
 a {
@@ -49,6 +49,13 @@ a[href^="https://"]:not(.badge)::after {
 	content: url('/imgs/external.png');
 }
 
+.highlight {
+	overflow: scroll;
+	background-color: #282828;
+	border-radius: 0.5em;
+	margin: 1em;
+}
+
 .title,
 h1 {
 	text-indent: 0.5em;
@@ -58,6 +65,7 @@ main {
 	background-color: #ffc27a;
 	padding: 1rem 1rem 1rem 1rem;
 	margin: 1rem 3rem 1rem 3rem;
+
 	@media (orientation: portrait) {
 		margin: 0.5rem 1rem 0.5rem 1rem;
 	}

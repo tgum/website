@@ -1,10 +1,8 @@
 from pprint import pprint
-import string
 import lupa
 from lupa import LuaRuntime
 from collections import namedtuple
 from enum import Enum
-from PIL import Image
 import termcolor
 
 import utils
@@ -173,3 +171,4 @@ def lua_splitmeta(content):
 
 lua.globals()["splitmeta"] = lua_splitmeta
 lua.globals()["extract_extra"] = utils.extract_extra
+lua.globals()["highlight_code"] = utils.highlight

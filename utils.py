@@ -1,4 +1,7 @@
 import os
+import pygments
+from pygments import lexers
+from pygments import formatters
 
 
 def listdir(path):
@@ -38,3 +41,11 @@ def extract_extra(text):
         extra = text[1:index]
         main = text[index + 1 :]
     return extra, main
+
+
+def highlight(code, language):
+    lexer = pygments.lexers.get_lexer_by_name(language)
+    formatter = pygments.formatters.HtmlFormatter(
+        linenos=True, style="fruity", classprefix="hi"
+    )
+    return pygments.highlight(code, lexer, formatter)
