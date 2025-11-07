@@ -45,7 +45,8 @@ a:hover {
 	border-width: 0 0 0.4rem 0;
 }
 
-a[href^="https://"]:not(.badge)::after {
+a[href^="https://"]:not(:has(.badge))::after,
+a[href^="http://"]:not(:has(.badge))::after {
 	content: url('/imgs/external.png');
 }
 

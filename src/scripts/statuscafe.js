@@ -1,10 +1,8 @@
 fetch("https://status.cafe/users/tgum/status.json")
   .then( r => r.json() )
   .then( r => {
-    if (!r.content.length) {
-      document.getElementById("statuscafe-content").innerHTML = "No status yet."
-      return
-    }
-    document.getElementById("statuscafe-username").innerHTML = '<a href="https://status.cafe/users/tgum" target="_blank">' + r.author + '</a> ' + r.face + ' ' + r.timeAgo
-    document.getElementById("statuscafe-content").innerHTML = r.content
+    document.querySelector("#statuscafe").innerHTML = `
+      <div id=statuscafe-username><a href="https://status.cafe/users/tgum" target="_blank">${r.author}</a>${r.face} ${r.timeAgo}</div>
+      <div id=statuscafe-content>${r.content}</div>
+    `
   })

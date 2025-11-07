@@ -1,0 +1,40 @@
+title: imagerepl
+description: idea for an image editing DSL
+creationtime: 4th Nov 2025
+edittime: 24th Oct 2025
+keywords: javascript, code, website
+---
+§blogpost
+<p>
+	when i want to edit photos i have to either open GIMP, which takes 1 minute to launch, so i often dont do it, or use a discord bot but as you can imagine the workflow isnt great lol. BUT compared to gimp it has a feature that i prefer, which is that to make an edit, instead of searching through every menu, you type commands. imagemagick is probably similar but idk how to use it and i doubt its practical for more complex tasks.
+</p>
+<p>
+	my idea is to have a kind of live coding environement but for image editing, possibly with extra editor features like an interactive coordinate widget etc. so then you can create a bunch of buffers (layers, objects, masks, same thing) and apply actions to them. like this (just a rough idea i havent though that much about the syntax)
+</p>
+§code [lua]
+birb = load("./bird.png")
+glasses = load("props/sunglasses.png")
+pattern = noise(birb.w, birb.h)
+// mask is just a texture
+mask = glasses.key(rgb(0,255,0), 5)
+// swizzling entire channels
+glasses = mux(glasses.rgb, mask.a)
+// foo:bar() is the same as foo = foo.bar()
+birb:scale(2x)
+glasses:scale(birb.w, AUTO)
+glasses:center
+glases:offset(0, -200)
+birb:resize(0, 100, KEEPPOS)
+// operate on multiple buffers at the same time
+[birb,glasses]:offset(0,100)
+caption = text("hey gus", 15, "comic sans")
+// if out is not assigned, all the buffers are stacked in order of creation
+out = [birb, glasses, caption].stack
+out = [out, pattern].blend(MULTIPLY)
+§/code
+	<p>
+	there would be a live preview to make the workflow as smooth as possible.
+	i probably wont make this unless i find a library which makes it really easy, but i think its an interesting idea.
+	</p>
+
+§/blogpost

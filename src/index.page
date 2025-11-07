@@ -12,12 +12,13 @@ keywords: index, blog, indieweb, smolweb
 	</p>
 
 	<h2>
-		things you can find here
+		things you can check out here
 	</h2>
 	§ul
 		§l [/projects/] stuff i made §/l
 		§l [/links.html] things i enjoy on the internet §/l
 		§l [/changelog.html] see changes §/l
+		§l [https://tgum.atabook.org] sign my guestbook §/l
 	§/ul
 	<h2>
 		todo:
