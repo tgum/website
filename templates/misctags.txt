@@ -3,7 +3,7 @@
 %cbox:
 	<div id="cboxcontainer"><iframe src="https://www5.cbox.ws/box/?boxid=958660&boxtag=WKJKjN" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class=cbox></iframe></div>
 %statuscafe:
-	<script src="/scripts/statuscafe.js"></script><div id="statuscafe"></div>
+	<script src="/scripts/statuscafe.js"></script><div id="statuscafe"><noscript>sorry you need javascript to load this widget</noscript></div>
 badge:
 	local alt, url = extract_extra(content)
 	return '<img class="badge" width="88" height="31" src="'..url..'" alt="'..alt..'" />'
@@ -14,6 +14,6 @@ countdown:
 %countdownscript:
 	<script src="/scripts/countdown2.js"></script>
 %lastfm:
-	<div class="lastfmwidget" data-user="tgum"></div>
+	<div class="lastfmwidget" data-user="tgum"><noscript>sorry you need javascript to load this widget</noscript></div>
 %lastfmscript:
 	<script src="/scripts/lastfm.js"></script>

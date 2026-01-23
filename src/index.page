@@ -5,11 +5,11 @@ edittime: 0
 keywords: index, blog, indieweb, smolweb
 ---
 §page
-	§h1 tgum's website §/h1
 	<div class="sidecontent">
 		§%statuscafe
 		§%lastfm
 	</div>
+	§h1 tgum's website §/h1
 	<p>
 		this is my personal website with stuff and stuff
 	</p>
