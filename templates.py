@@ -70,8 +70,7 @@ def tokenize(text):
                 token_type = TokenTypes.TEXT
             else:
                 token_content += char
-    if token_type == TokenTypes.TEXT:
-        tokens.append(Token(token_type, token_content, 0))
+    tokens.append(Token(token_type, token_content, 0))
     return tokens
 
 
@@ -97,6 +96,7 @@ def get_matching(start, tokens_list):
         index += 1
         if index >= len(tokens_list):
             print(tokens_list[start])
+            pprint(tokens_list)
         token = tokens_list[index]
         if token.type == TokenTypes.OPEN_TAG:
             depth += 1
@@ -139,8 +139,8 @@ def flatten(tree, templates):
                 )
             except Exception as e:
                 print(f"{ERROR_TEXT}: uhh theres an error running {tree["tagname"]}...")
-                raise e
                 print(e)
+                raise e
         else:
             print(f"{WARN_TEXT}: template §{tree["tagname"]} doesnt exist :/")
     return output

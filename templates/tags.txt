@@ -1,7 +1,7 @@
 if:
 	local condition, rest = extract_extra(content)
 	if templates[condition] ~= nil then
-		return rest
+		return format(rest)
 	else
 		return ""
 	end
@@ -20,7 +20,6 @@ ul:
 	end
 	return output.."</ul>"
 l:
-	print(content)
 	local url, text = extract_extra(content)
 	if url == "" then
 		url = text

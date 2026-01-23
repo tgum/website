@@ -6,7 +6,10 @@ keywords: index, blog, indieweb, smolweb
 ---
 §page
 	§h1 tgum's website §/h1
-	§%statuscafe
+	<div class="sidecontent">
+		§%statuscafe
+		§%lastfm
+	</div>
 	<p>
 		this is my personal website with stuff and stuff
 	</p>
@@ -17,7 +20,7 @@ keywords: index, blog, indieweb, smolweb
 	§ul
 		§l [/projects/] stuff i made §/l
 		§l [/links.html] things i enjoy on the internet §/l
-		§l [/changelog.html] see changes §/l
+		§l [/recipes/] my recipes §/l
 		§l [https://tgum.atabook.org] sign my guestbook §/l
 	§/ul
 	<h2>
@@ -36,5 +39,6 @@ keywords: index, blog, indieweb, smolweb
 	§%cbox
 	§%mybutton
 	§%countdownscript
+	§%lastfmscript
 §/page
 

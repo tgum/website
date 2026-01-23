@@ -5,6 +5,11 @@
 
 /* idk like general styles */
 
+html {
+	background-color: #ffc27a;
+	background-image: url('/imgs/background.png');
+}
+
 body {
 	font-family: sans-serif;
 	margin: 0;
@@ -52,6 +57,7 @@ a[href^="http://"]:not(:has(.badge))::after {
 
 h1 {
 	text-indent: 0.5em;
+	line-height: normal;
 }
 
 main {
@@ -190,4 +196,40 @@ textarea:resizer {
 
 #statuscafe-content {
 	margin: 0 1em 0.5em 1em;
+}
+
+/* last.fm widget */
+
+.lastfmwidget {
+	padding: .5em;
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABEklEQVRYR+2Y7RHCMAiG7UiO4whO5AiO40j6C09puRcIB6GX/mtDy3NPyEezXYqv5/X+PkK4vR7b7/O/mwrmdFBKSCb4vSRBGxdmtAyUdwmvGTKEAJEx1E55RKPtQCWTUQMvzOh0oNppYtSkN8+3Rr0fsIJ78yxQNMHzdjQWwiZ8awlY4xeo1RiK72tUu1IgA952Kf/O6PSg1YC8BzjPbsJH85m3S63viaDS/tKaYDR+1eioQbTUUimuGvWaPk+Neg1kvdd3rc8yZM3T36j3J8xqShuvPimhD1btBSBoFRg33Q90tprkPOkHENrBEw46ej7q3j1ZTzDSQbVdojVg/QdDYyRsZUJmkYg0UASC2k8D+gHb3yy6ImtqfQAAAABJRU5ErkJggg==") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+    text-align: center;
+}
+
+.lastfmsong,
+.lastfmartist {
+	font-weight: bold;
+}
+
+.lastfmalbum {
+	display: none;
+}
+
+/* small side "bar" on the homepage */
+
+.sidecontent {
+	float: right;
+	max-width: 20em;
+	margin: 1em;
+}
+.sidecontent > * {
+	margin: 1em 0;
+}
+@media (max-width: 700px) {
+	.sidecontent {
+		float: none;
+		max-width: 100%;
+	}
 }

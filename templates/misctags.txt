@@ -13,3 +13,7 @@ countdown:
 	return '<span class="countdown" data-message="'..endtext..'" data-timestamp="'..strease.trim(timestamp)..'"></span>'
 %countdownscript:
 	<script src="/scripts/countdown2.js"></script>
+%lastfm:
+	<div class="lastfmwidget" data-user="tgum"></div>
+%lastfmscript:
+	<script src="/scripts/lastfm.js"></script>

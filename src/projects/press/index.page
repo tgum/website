@@ -1,0 +1,10 @@
+title: PRESS: pretty reasonable easy story standard
+description: a format for interactive stories
+creationtime: 0
+edittime: 0
+---
+§page
+	§h1 §%title §/h1
+	<div id="game"></div>
+	<script src="press.js"></script>
+§/page

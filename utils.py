@@ -26,7 +26,7 @@ def splitmeta(file):
             splitline = line.split(": ")
             if len(splitline) < 2:
                 continue
-            meta["%" + splitline[0]] = splitline[1]
+            meta["%" + splitline[0]] = ": ".join(splitline[1:])
     return rest, meta
 
 
