@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@indiefellas/nekoweb-api": "^2.2.0",
+    "@types/adm-zip": "^0.5.7",
+    "adm-zip": "^0.5.16"
+  },
+  "type": "module"
+}
