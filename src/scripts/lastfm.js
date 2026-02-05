@@ -1,6 +1,6 @@
 (() => {
   const API_KEY = "8cdf2470f3b0da40da7724c595d00076"
-  const containers = document.querySelectorAll(".lastfmwidget")
+  const containers = document.querySelectorAll(".lastfmwidget-container")
 
   containers.forEach(container => {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&format=json&user=${container.dataset.user}&api_key=${API_KEY}`)
@@ -14,10 +14,13 @@
           const artist = track.artist["#text"]
           const imageurl = track.image[2]["#text"]
           console.log(track)
-          container.innerHTML = `<div>last song i listened to:</div>
-            <img src="${imageurl}" class="lastfmcover"><br>
-            <span class="lastfmsong">${name}</span> by <span class="lastfmartist">${artist}</span><br>
-            <span class="lastfmalbum">${album}</span>
+          container.innerHTML = `
+            <div class="lastfmwidget">
+              <div>last song i listened to:</div>
+              <img width=174 height=174 src="${imageurl}" class="lastfmcover"><br>
+              <span class="lastfmsong">${name}</span> by <span class="lastfmartist">${artist}</span><br>
+              <span class="lastfmalbum">${album}</span>
+            </div>
           `
           console.log(name, album, artist)
         }

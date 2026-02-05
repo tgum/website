@@ -1,23 +1,23 @@
-%blogcard:
-	<div class="blogcard">
-		§%hr
-		<h2><a href="§%url ">§%title </a></h2>
-		<div class=time>Written on: §%creationtime </div>
-		<p>§%description </p>
-	</div>
 blogpost:
 	return format([[
-	§page
-	<article>
-	§h1 §%title §/h1
-	<div class=time>Written on the <strong>§%creationtime </strong></div>
-	<hr>
-	<section>
-	]]..content..[[
-	</section>
-	</article>
-	§/page
+		§page
+			<article>
+				§h1 §%title §/h1
+				<div class=time>Written on the <strong>§%creationtime </strong></div>
+				<hr>
+				<section>
+					]]..content..[[
+				</section>
+			</article>
+		§/page
 	]])
+%blogcard:
+	<article class="h-entry blogcard">
+		§%hr
+		<h2><a class="u-url p-name" href="§%url ">§%title </a></h2>
+		<time class="dt-published" datetime="§%datetime ">Written on the §%creationtime </time>
+		<p class="p-summary">§%description </p>
+	</article>
 blogpage:
 	local blogposts = listdir(INPUT_DIR.."blog")
 	local output = ""
@@ -27,7 +27,20 @@ blogpage:
 			content = readfile(INPUT_DIR..path)
 			content, meta = splitmeta(content)
 			meta["%url"] = "/"..path:gsub("%.page$", ".html")
+
+			local ts = tostring
+			local date = os.date("*t", meta["%timestamp"])
+			print(tonumber(meta["%timestamp"]))
+			print(date.year)
+			local datetime = string.format("%d-%02d-%02d", date.year, date.month, date.day)
+			meta["%datetime"] = datetime
+
 			output = format("§%blogcard ", meta)..output
 		end
 	end
+	output = [[<div class="h-feed"> 
+	§h1 [class="p-name"] blog archive §/h1
+	<p class="p-summary">
+		hey! this is my blog where i sometimes write stuff
+	</p>]]..output.." </div>"
 	return output

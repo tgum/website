@@ -3,13 +3,21 @@ description: some buttons i found and enjoy
 keywords: 
 ---
 §page
-§h1 §%title §/h1
-<p>
-	§%description
-</p>
-<p style="text-align: center;">
-	§l [https://adamledoux.net] §badge [adam le doux dot net] /imgs/buttons/adamledoux.png §/badge §/l
-	§l [https://github.com/gorhill/uBlock] §badge [ublock origin NOW!] /imgs/buttons/ublock_origin_now.webp §/badge §/l
-	§l [http://www.hat.net/abs/noclick/] §badge [Don't click here!] /imgs/buttons/noclick.gif §/badge §/l
-</p>
+	§h1 §%title §/h1
+	<p>
+		§%description
+	</p>
+	<p style="text-align: center;">
+		<!--
+		§l [URL] §badge [DESC] /imgs/buttons/IMG §/badge §/l
+		§badge [DESC] /imgs/buttons/IMG §/badge
+		-->
+		§l [https://adamledoux.net] §badge [adam le doux dot net] /imgs/buttons/adamledoux.png §/badge §/l
+		§l [https://github.com/gorhill/uBlock] §badge [ublock origin NOW!] /imgs/buttons/ublock_origin_now.webp §/badge §/l
+		§l [http://www.hat.net/abs/noclick/] §badge [Don't click here!] /imgs/buttons/noclick.gif §/badge §/l
+		§badge [Snort the Lipids NOW!] /imgs/buttons/snort_lipids.png §/badge
+		§badge [Firefox user] /imgs/buttons/firefox_user.gif §/badge
+		§l [https://ruffle.rs/] §badge [Get Ruffle] /imgs/buttons/ruffle.png §/badge §/l
+		§%incrementbutton
+	</p>
 §/page

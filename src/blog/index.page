@@ -5,9 +5,5 @@ edittime: 0
 keywords: blog, programming
 ---
 §page
-	§h1 blog archive §/h1
-	<p>
-		hey! this is my blog where i sometimes write stuff
-	</p>
 	§blogpage §/blogpage
 §/page

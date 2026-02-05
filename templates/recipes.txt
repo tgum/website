@@ -10,7 +10,7 @@ recipe:
 	<article class="h-recipe">
 	§h1 [class="p-name"] §%title §/h1
 	<p> §%description </p>
-	<p> ]]..format("§if [%source] Original from: §%source §/if")..[[ </p>
+	<p> ]]..format("§if [%source] original from: §%source §/if")..[[ </p>
 	<hr>
 	<section>
 	]]..content..[[

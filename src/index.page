@@ -1,43 +1,62 @@
 title: home page
 description: hi welcome to tgum's website
-creationtime: 0
-edittime: 0
-keywords: index, blog, indieweb, smolweb
 ---
 §page
+	§h1 tgum's website §/h1
 	<div class="sidecontent">
 		§%statuscafe
 		§%lastfm
+		§%cbox
 	</div>
-	§h1 tgum's website §/h1
 	<p>
-		this is my personal website with stuff and stuff.
+		hi! this is my website with a bunch of stuff :D
 	</p>
 
-	<h2>
-		things you can check out here
-	</h2>
+	§h2 things you can check out here §/h2
 	§ul
 		§l [/projects/] stuff i made §/l
 		§l [/links.html] things i enjoy on the internet §/l
 		§l [/recipes/] my recipes §/l
-		§l [https://tgum.atabook.org] sign my guestbook §/l
+		§l [/guestbook.html] sign my guestbook §/l
 	§/ul
-	<h2>
-		todo:
-	</h2>
+	§h2 todo: §/h2
 	§ul
 		add an updates section to the homepage
-		add an atom feed
-		write stuff lol
+		add an atom feed for my blog
+		write stuff posts and stuff
+		add a "books" and "music" page
+		interact with more websites!
 	§/ul
 	<p>
-		have any suggestions for this website or just wanna say hi?<br>
-		§badge [is it slow? say so!] /imgs/buttons/isitslow.gif §/badge
+		time until my birthday: §countdown [my birthday has passed] 29 jan 2027 §/countdown
 	</p>
-	<p>time till 2026: §countdown [its 2026!] 2026 §/countdown</p>
-	§%cbox
-	§%mybutton
+	<p style="text-align: center;">
+		<!--
+		§l [URL] §badge [DESC] /imgs/buttons/IMG §/badge §/l
+		§badge [DESC] /imgs/buttons/IMG §/badge
+		-->
+		§%mybutton
+		§l [https://lyra.horse] §badge [DESC] /imgs/buttons/lyra.horse.png §/badge §/l
+		§badge [Best viewed with Any browser] /imgs/buttons/any_browser.gif §/badge
+		§badge [DESC] /imgs/buttons/bookmark_this_page.gif §/badge
+		§badge [DESC] /imgs/buttons/chrome_is_evil.gif §/badge
+		§badge [DESC] /imgs/buttons/ienuke.gif §/badge
+		§badge [DESC] /imgs/buttons/isitslow.gif §/badge
+		§badge [DESC] /imgs/buttons/its_good_to_share.gif §/badge
+		§badge [DESC] /imgs/buttons/linux_powered.gif §/badge
+		§badge [DESC] /imgs/buttons/html_learn_it_today.gif §/badge
+		§badge [DESC] /imgs/buttons/sign_guestbook.gif §/badge
+		§badge [DESC] /imgs/buttons/made_with_css.gif §/badge
+		§badge [DESC] /imgs/buttons/madewithlove.png §/badge
+		§badge [DESC] /imgs/buttons/piracy.gif §/badge
+		§l [https://adamledoux.net] §badge [adam le doux dot net] /imgs/buttons/adamledoux.png §/badge §/l
+		§l [https://github.com/gorhill/uBlock] §badge [ublock origin NOW!] /imgs/buttons/ublock_origin_now.webp §/badge §/l
+		§l [http://www.hat.net/abs/noclick/] §badge [Don't click here!] /imgs/buttons/noclick.gif §/badge §/l
+		§badge [Snort the Lipids NOW!] /imgs/buttons/snort_lipids.png §/badge
+		§badge [Firefox user] /imgs/buttons/firefox_user.gif §/badge
+		§l [https://ruffle.rs/] §badge [Get Ruffle] /imgs/buttons/ruffle.png §/badge §/l
+		§%incrementbutton
+	</p>
 	§%countdownscript
 	§%lastfmscript
 §/page

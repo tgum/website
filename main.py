@@ -2,6 +2,7 @@ import os
 import shutil
 from pprint import pprint
 import termcolor
+from bs4 import BeautifulSoup
 
 import utils
 import templates
@@ -35,13 +36,17 @@ for root, dirs, files in os.walk(INPUT_DIR):
         if filepath.endswith(".page"):
             with open(INPUT_DIR + filepath) as f:
                 text, meta = utils.splitmeta(f.read())
-                outputfile = OUTPUT_DIR + filepath.removesuffix("page") + "html"
-                termcolor.cprint(f"TEMPLATING {filepath}", "blue")
+                extension = meta.get("%ext", "html")
+                outputfile = OUTPUT_DIR + filepath.removesuffix("page") + extension
+                termcolor.cprint(f"TEMPLATING {filepath} to {outputfile}", "blue")
                 meta["%path"] = filepath
                 formatted = templates.format(text, meta)
 
+                soup = BeautifulSoup(formatted, "html.parser")
+                prettyfied = soup.prettify(None, "html")
+
                 with open(outputfile, "w") as f:
-                    f.write(formatted)
+                    f.write(prettyfied)
         else:
             termcolor.cprint(f"COPYING {filepath}", "cyan")
             shutil.copy(INPUT_DIR + filepath, OUTPUT_DIR + filepath)

@@ -1,0 +1,15 @@
+{
+  "short_name": "Impostor",
+  "name": "tgum's impostor",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "white",
+  "background_color": "#94216a"
+}

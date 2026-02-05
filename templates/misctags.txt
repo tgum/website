@@ -1,19 +1,45 @@
 %mybutton:
-	§badge [tgum] /imgs/button.gif §/badge
+	§badge [my button :D] /imgs/button.gif §/badge
+
 %cbox:
-	<div id="cboxcontainer"><iframe src="https://www5.cbox.ws/box/?boxid=958660&boxtag=WKJKjN" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class=cbox></iframe></div>
+	<div id="cboxcontainer"><iframe src="https://www5.cbox.ws/box/?boxid=958660&boxtag=WKJKjN" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" class=cbox></iframe></div>
+
 %statuscafe:
-	<script src="/scripts/statuscafe.js"></script><div id="statuscafe"><noscript>sorry you need javascript to load this widget</noscript></div>
+	<script src="/scripts/statuscafe.js"></script><div id="statuscafe-container"></div>
+
 badge:
 	local alt, url = extract_extra(content)
-	return '<img class="badge" width="88" height="31" src="'..url..'" alt="'..alt..'" />'
+	return '<img class="badge" width="88" height="31" src="'..url..'" title="'..alt..'" alt="'..alt..'" />'
+
+%incrementbutton:
+	<iframe src="//incr.easrng.net/badge?key=tgum" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0" class="badge"></iframe>
+
 countdown:
 	local endtext, timestamp = extract_extra(content)
 	if endtext == "" then endtext = "this countdown ended" end
 	return '<span class="countdown" data-message="'..endtext..'" data-timestamp="'..strease.trim(timestamp)..'"></span>'
+
 %countdownscript:
 	<script src="/scripts/countdown2.js"></script>
+
 %lastfm:
-	<div class="lastfmwidget" data-user="tgum"><noscript>sorry you need javascript to load this widget</noscript></div>
+	<div class="lastfmwidget-container" data-user="tgum"></div>
+
 %lastfmscript:
 	<script src="/scripts/lastfm.js"></script>
+
+%bucketring:
+	<div style="text-align:center">
+		§l [https://webring.bucketfish.me/redirect.html?to=prev&name=tgum] [« prev] §/l
+		§l [https://webring.bucketfish.me] bucket webring §/l
+		§l [https://webring.bucketfish.me/redirect.html?to=random&name=tgum] <small>[random]</small> §/l
+		§l [https://webring.bucketfish.me/redirect.html?to=next&name=tgum] [next »] §/l
+	</div>
+
+%noairing:
+	<div style="text-align:center">
+		§l [https://baccyflap.com/noai/?prv&s=gus] [« prev] §/l
+		§l [https://baccyflap.com/noai] no ai webring §/l
+		§l [https://baccyflap.com/noai/?rnd] <small>[random]</small> §/l
+		§l [https://baccyflap.com/noai/?nxt&s=gus] [next »] §/l
+	</div> 

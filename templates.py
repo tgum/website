@@ -64,7 +64,7 @@ def tokenize(text):
             TokenTypes.CLOSE_TAG,
             TokenTypes.OPEN_TAG,
         ]:
-            if char.isspace():
+            if char.isspace() or char == "§":
                 tokens.append(Token(token_type, token_content, 0))
                 token_content = char
                 token_type = TokenTypes.TEXT

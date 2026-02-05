@@ -24,14 +24,14 @@ l:
 	if url == "" then
 		url = text
 	end
-	return '<a href="'..strease.trim(url)..'">'..format(text).."</a>"
+	return '<a href="'..strease.trim(url)..'">'..format(strease.trim(text)).."</a>"
 img:
 	-- TODO: load width and height to prevent layout change
 	local alt, url = extract_extra(content)
 	return '<img src="'..url..'" alt="'..alt.."" />"
 h1:
 	local attributes, text = extract_extra(content)
-	return "<h1 class=title "..attributes.." >"..format(text).."</h1>"
+	return "<h1 "..attributes.." >"..format(text).."</h1>"
 h2:
 	local attributes, text = extract_extra(content)
 	return "<h2 "..attributes.." >"..format(text).."</h2>"

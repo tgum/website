@@ -5,43 +5,55 @@
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="ie=edge">
-			<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+			<link rel="shortcut icon" href="/imgs/squirrel.png">
 			<link rel="stylesheet" href="/style.css">
 			<link rel="stylesheet" href="/styles/code.css">
 			<meta name="description" content=" §%description ">
-			<meta name="keywords" content=" §%keywords ">
 			<meta name="author" content="tgum">
 			<meta property="og:title" content=" §%title ">
 			<meta property="og:description" content=" §%description ">
-			<link rel="webmention" href="https://webmention.io/tgum.neocities.org/webmention" />
 			<title> §%title </title>
+			<link rel="webmention" href="https://webmention.io/tgum.neocities.org/webmention" />
 		</head>
 		<body>
 			<header>
 				§%navbar
 			</header>
 			<main>
+
 %fakeadnotice:
 	<script defer src="/scripts/nativeads.js"></script><div id="ad-note-hidden" class="ftf-dma-note ad native-ad native-ad-1 ytd-j yxd-j yxd-jd aff-content-col aff-inner-col aff-item-list ark-ad-message inplayer-ad inplayer_banners in_stream_banner trafficjunky-float-right dbanner preroll-blocker happy-inside-player blocker-notice blocker-overlay exo-horizontal ave-pl bottom-hor-block brs-block advboxemb wgAdBlockMessage glx-watermark-container overlay-advertising-new header-menu-bottom-ads rkads mdp-deblocker-wrapper amp-ad-inner imggif bloc-pub bloc-pub2 hor_banner aan_fake aan_fake__video-units rps_player_ads fints-block__row full-ave-pl full-bns-block vertbars video-brs player-bns-block wps-player__happy-inside gallery-bns-bl stream-item-widget adsbyrunactive happy-under-player adde_modal_detector adde_modal-overlay ninja-recommend-block aoa_overlay message"><p id="ad-note-content-wrapper"></p></div>
+
+%webrings:
+	<div class="webrings">
+		<div style="text-align:center">webrings:</div>
+		§%bucketring
+		§%noairing
+	</div>
+
 %closedoc:
 		</main>
 		<footer>
+			§%webrings
 			§%fakeadnotice
 		</footer>
 	</body>
 	</html>
+
 navel:
 	local url, text = extract_extra(content)
 	return '<a class=navel href="'..url..'">'..format(text).."</a>"
+	
 %navbar:
 	<nav>
 	§ul [id=navbar]
-		§navel [/] home §/navel
-		§navel [/blog] blog §/navel
+		§navel [/] home§/navel
+		§navel [/blog] blog§/navel
 		§navel [/links.html] links §/navel
 		§navel [/projects/] projects §/navel
 		§navel [/about.html] about §/navel
 	§/ul
 	</nav>
+
 page:
 	return format("§%opendoc "..content.." §%closedoc ")

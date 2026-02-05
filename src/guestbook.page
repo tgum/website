@@ -1,0 +1,8 @@
+title: guestbook
+description: sign my guestbok!
+keywords: 
+---
+§page
+	§h1 sign my guestbook! §/h1
+	<iframe src="https://guestbooks.kamiscorner.xyz/embed/guestbook/2c3b4919-0ec7-4438-b48a-f82083bd73fa" width="100%" height="500px" frameborder="0"></iframe>
+§/page
